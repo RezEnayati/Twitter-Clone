@@ -1,51 +1,45 @@
-//
+ //
 //  LoginViewController.swift
 //  Twitter
 //
-//  Created by Reza Enayati on 2/25/22.
+//  Created by Reza Enayati on 3/5/22.
 //  Copyright © 2022 Dan. All rights reserved.
 //
 
 import UIKit
 
 class LoginViewController: UIViewController {
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
     
-    
+    //Making sure the user stays logged in after closing the session.
     override func viewDidAppear(_ animated: Bool) {
-        if UserDefaults.standard.bool(forKey: "userloggedin") == true {
+        if UserDefaults.standard.bool(forKey: "userLoggedIn") == true {
             self.performSegue(withIdentifier: "loginToHome", sender: self)
+            UserDefaults.standard.set(false, forKey: "userLoggedIn")
         }
     }
     
     
     
-    @IBAction func onLoginButtton(_ sender: Any) {
-        let myUrl = "https://api.twitter.com/oauth/request_token"
-        TwitterAPICaller.client?.login(url: myUrl , success: {
+    
+    //Login function using thr API
+    @IBAction func onLoginButton(_ sender: Any) {
+        let loginUrl = "https://api.twitter.com/oauth/request_token"
+        TwitterAPICaller.client?.login(url: loginUrl, success: {
             
+            //Keeping the user logged in after closing the seesion
+            UserDefaults.standard.set(true, forKey: "userLoggedIn")
             
-            UserDefaults.standard.set(true, forKey: "userloggedin")
+            //Perforing the Segue
             self.performSegue(withIdentifier: "loginToHome", sender: self)
-        }, failure: { (Error) in
-            print("Could not log in")
+        }, failure: { (error) in
+            print("Could not login!")
         })
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

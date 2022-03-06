@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -13,18 +13,51 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="TwitterLogoBlue" translatesAutoresizingMaskIntoConstraints="NO" id="8l5-18-PYK">
-                                <rect key="frame" x="133" y="288" width="108" height="91"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Twitter_Logo_Blue-2" translatesAutoresizingMaskIntoConstraints="NO" id="pTZ-y3-3qm">
+                                <rect key="frame" x="140.66666666666666" y="400" width="146.99999999999997" height="126"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="147" id="iQK-uZ-gJF"/>
+                                    <constraint firstAttribute="height" constant="126" id="rhE-bp-X92"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="reply-icon" translatesAutoresizingMaskIntoConstraints="NO" id="fqB-5j-Npo">
+                                <rect key="frame" x="140" y="534" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="6IT-v2-7Nf"/>
+                                    <constraint firstAttribute="width" constant="30" id="9aR-9O-A2E"/>
+                                    <constraint firstAttribute="height" constant="30" id="KWt-7v-EFd"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="nNS-Ao-MsR"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="retweet-icon-green" translatesAutoresizingMaskIntoConstraints="NO" id="EKr-Ib-Rcy">
+                                <rect key="frame" x="257" y="534" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="AUO-bh-SSH"/>
+                                    <constraint firstAttribute="height" constant="30" id="KA0-n8-el5"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="favor-icon-red" translatesAutoresizingMaskIntoConstraints="NO" id="Dpo-dl-GyA">
+                                <rect key="frame" x="199" y="534" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="rmn-RU-gWz"/>
+                                    <constraint firstAttribute="height" constant="30" id="tR0-4g-3XA"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="8l5-18-PYK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mtP-KO-gJj"/>
-                            <constraint firstItem="8l5-18-PYK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="tvl-f8-JHw"/>
+                            <constraint firstItem="Dpo-dl-GyA" firstAttribute="top" secondItem="pTZ-y3-3qm" secondAttribute="bottom" constant="8" id="0H5-DA-OeM"/>
+                            <constraint firstItem="pTZ-y3-3qm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6cd-jB-V4T"/>
+                            <constraint firstItem="Dpo-dl-GyA" firstAttribute="centerX" secondItem="pTZ-y3-3qm" secondAttribute="centerX" id="8Vg-oI-t5L"/>
+                            <constraint firstItem="Dpo-dl-GyA" firstAttribute="top" secondItem="fqB-5j-Npo" secondAttribute="top" id="NdF-eX-0Eq"/>
+                            <constraint firstItem="EKr-Ib-Rcy" firstAttribute="leading" secondItem="Dpo-dl-GyA" secondAttribute="trailing" constant="28" id="lQy-eT-awV"/>
+                            <constraint firstItem="Dpo-dl-GyA" firstAttribute="leading" secondItem="fqB-5j-Npo" secondAttribute="trailing" constant="29" id="lVs-9M-NRL"/>
+                            <constraint firstItem="Dpo-dl-GyA" firstAttribute="top" secondItem="EKr-Ib-Rcy" secondAttribute="top" id="rWd-zL-5i2"/>
+                            <constraint firstItem="pTZ-y3-3qm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="yiC-qh-Ilo"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -34,6 +67,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TwitterLogoBlue" width="200" height="200"/>
+        <image name="Twitter_Logo_Blue-2" width="400" height="400"/>
+        <image name="favor-icon-red" width="30" height="30"/>
+        <image name="reply-icon" width="30" height="30"/>
+        <image name="retweet-icon-green" width="30" height="30"/>
     </resources>
 </document>

@@ -2,7 +2,7 @@
 //  TweetCellTableViewCell.swift
 //  Twitter
 //
-//  Created by Reza Enayati on 2/25/22.
+//  Created by Reza Enayati on 3/5/22.
 //  Copyright © 2022 Dan. All rights reserved.
 //
 
@@ -13,7 +13,7 @@ class TweetCellTableViewCell: UITableViewCell {
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var tweetContent: UILabel!
+    @IBOutlet weak var tweetContents: UILabel!
     
     
     
@@ -21,7 +21,6 @@ class TweetCellTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

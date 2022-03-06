@@ -13,7 +13,7 @@
       "size" : "20x20"
     },
     {
-      "filename" : "twiiter-logo-29@2x-1.png",
+      "filename" : "twiiter-logo-29@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
@@ -64,7 +64,6 @@
       "size" : "29x29"
     },
     {
-      "filename" : "twiiter-logo-29@2x.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
