@@ -1,4 +1,4 @@
-# Project 3 - *Twittere*
+# Project 3 - *Twitter Clone*
 
 # Twitter - Part II
 
